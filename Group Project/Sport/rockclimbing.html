@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="../Assets/Image/logo.png" type="image/icon type">
+    <link rel="stylesheet" href="../Assets/css/Home.css">
+    <link rel="stylesheet" href="../Assets/css/Detail.css">
+    <title>Firehawk - Ignite Your Limits</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- First section -->
+        <div class="firstBox">
+            <img oncontextmenu="return false;" src="../Assets/Image/bg.jpg">
+            <div class="header">
+                <div class="logo">
+                    <a href="../Home/home.html">Fire Hawk</a>
+                </div>
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <span>Sports</span>
+                        <div class="dropdown-content">
+                            <a href="../Detail/LandBased.html">Land-Based</a>
+                            <a href="../Detail/WaterBased.html">Water-Based</a>
+                            <a href="../Detail/AirBased.html">Air-Based</a>
+                        </div>
+                    </div>
+                    <!-- <a href="../Events/events.html">Events</a> -->
+                    <a href="../Tips/tips.html">Safety Tips</a>
+                    <a href="../Contact/contact.html">Contact Us</a>
+                    <a href="../About/about.html">About Us</a>
+                </div>
+                <div class="contact-button">
+                    <a href="../Login/login.html">Login</a>
+                </div>
+            </div>
+            <div class="top-bgg-title-box">
+                <h1 class="top-bgg-title">Ignite Your Potential, <br> Unlock Your Fear.</h1>
+            </div>
+        </div>
+
+        <div class="video-tour-box">
+            <h1>
+                <b>Rock Climbing: Conquering Heights with Strength and Focus</b>
+                <br><br>
+            </h1>
+            <video muted loop autoplay src="../Assets/Image/rock.mp4" width="900"></video><br>
+        </div>
+        <!-- More Info Section -->
+        <div class="articleBox">
+
+            <p align="justify">
+                Rock climbing is a thrilling adventure sport that tests your physical endurance and mental
+                determination. Whether scaling natural rock faces or tackling indoor climbing walls, this activity
+                demands strength, balance, and problem-solving skills. There are various styles of climbing, such as
+                traditional, sport, and bouldering, each with its own set of techniques and challenges.
+                
+                <br><br><br>
+
+                Climbing is not just about physical exertion; it’s also a mental game. Climbers need to strategize their
+                moves and maintain focus while navigating vertical terrain. The sport fosters resilience, teamwork, and
+                a connection to nature. Reaching the summit is a rewarding experience, offering climbers a sense of
+                accomplishment and breathtaking views.
+            </p>
+            <button id="openModal"
+            style="display: block; margin: 20px auto; padding: 10px 20px; background-color: #E23A48; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+            Try Now
+        </button>
+    </div>
+
+    <div class="forthBox">
+        <div class="forthBox-left">
+            <p>&#169; Firehawk <br>All rights reserved</p>
+        </div>
+        <div class="forthBox-right">
+            <p>Our Social</p>
+            <div icon-container>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../Assets/icon/facebook.png" width="40" height="35">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="../Assets/icon/twitter.png" width="40" height="35">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../Assets/icon/instagram.png" width="40" height="35">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="bookingModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Book Your Adventure</h2>
+        </div>
+        <div class="modal-body">
+            <input type="text" id="name" placeholder="Enter Your Name" required>
+            <input type="email" id="email" placeholder="Enter Your Email" required>
+            <select id="sport" required>
+                <option value="" disabled selected>Select a Sport</option>
+                <option value="kayaking">Kayaking</option>
+                <option value="surfing">Surfing</option>
+                <option value="motor_cross">Motor Cross</option>
+                <option value="rock_climbing">Rock Climbing</option>
+                <option value="skateboarding">Skateboarding</option>
+                <option value="skydiving">Skydiving</option>
+            </select>
+            <input type="date" id="date" required>
+            <p><strong>Price: RM 100</strong></p>
+        </div>
+        <div class="modal-footer">
+            <button class="submit-btn" onclick="submitBooking()">Submit</button>
+            <button class="close-btn" id="closeModal">Close</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.getElementById("closeModal");
+    const modal = document.getElementById("bookingModal");
+
+    openModal.addEventListener("click", () => {
+        modal.style.display = "flex";
+    });
+
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    function submitBooking() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const sport = document.getElementById("sport").value;
+        const date = document.getElementById("date").value;
+
+        if (!name || !email || !sport || !date) {
+            alert("Please fill in all the fields!");
+            return;
+        }
+
+        alert(`Thank you, ${name}! Your booking for ${sport} on ${date} has been confirmed. Price: RM 100.`);
+        modal.style.display = "none";
+    }
+</script>
+</body>
+
+</html>

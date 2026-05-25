@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="../Assets/Image/logo.png" type="image/icon type">
+    <link rel="stylesheet" href="../Assets/css/Home.css">
+    <link rel="stylesheet" href="../Assets/css/Detail.css">
+    <title>Firehawk - Ignite Your Limits</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- First section -->
+        <div class="firstBox">
+            <img oncontextmenu="return false;" src="../Assets/Image/bg.jpg">
+            <div class="header">
+                <div class="logo">
+                    <a href="../Home/home.html">Fire Hawk</a>
+                </div>
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <span>Sports</span>
+                        <div class="dropdown-content">
+                            <a href="../Detail/LandBased.html">Land-Based</a>
+                            <a href="../Detail/WaterBased.html">Water-Based</a>
+                            <a href="../Detail/AirBased.html">Air-Based</a>
+                        </div>
+                    </div>
+                    <!-- <a href="../Events/events.html">Events</a> -->
+                    <a href="../Tips/tips.html">Safety Tips</a>
+                    <a href="../Contact/contact.html">Contact Us</a>
+                    <a href="../About/about.html">About Us</a>
+                </div>
+                <div class="contact-button">
+                    <a href="../Login/login.html">Login</a>
+                </div>
+            </div>
+            <div class="top-bgg-title-box">
+                <h1 class="top-bgg-title">Ignite Your Potential, <br> Unlock Your Fear.</h1>
+            </div>
+        </div>
+
+        <div class="video-tour-box">
+            <h1>
+                <b>Snorkeling: Discovering the Underwater World</b>
+                <br><br>
+            </h1>
+            <video muted loop autoplay src="../Assets/Image/snorkel.mp4" width="900"></video><br>
+        </div>
+        <!-- More Info Section -->
+        <div class="articleBox">
+
+            <p align="justify">
+                Snorkeling is an accessible and enchanting way to explore the vibrant life beneath the water’s surface.
+                Equipped with a snorkel, mask, and fins, participants float face-down in shallow waters, observing coral
+                reefs, tropical fish, and other marine creatures. Unlike scuba diving, snorkeling requires minimal
+                training and equipment, making it a popular choice for casual adventurers and families.
+                <br><br><br>
+                This activity is as educational as it is recreational. Snorkelers can witness firsthand the beauty and
+                diversity of marine ecosystems while gaining a deeper appreciation for ocean conservation. Many iconic
+                snorkeling spots, such as the Great Barrier Reef in Australia or Hanauma Bay in Hawaii, boast
+                breathtaking underwater scenery teeming with life.
+                <br><br><br>
+                Snorkeling is also an excellent low-impact exercise, promoting cardiovascular health and enhancing
+                breathing efficiency. The calming effect of floating in the water, combined with the awe-inspiring
+                sights, makes snorkeling a rejuvenating experience for the mind and body.
+
+            </p>
+            <button id="openModal"
+            style="display: block; margin: 20px auto; padding: 10px 20px; background-color: #E23A48; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+            Try Now
+        </button>
+    </div>
+
+    <div class="forthBox">
+        <div class="forthBox-left">
+            <p>&#169; Firehawk <br>All rights reserved</p>
+        </div>
+        <div class="forthBox-right">
+            <p>Our Social</p>
+            <div icon-container>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../Assets/icon/facebook.png" width="40" height="35">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="../Assets/icon/twitter.png" width="40" height="35">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../Assets/icon/instagram.png" width="40" height="35">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="bookingModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Book Your Adventure</h2>
+        </div>
+        <div class="modal-body">
+            <input type="text" id="name" placeholder="Enter Your Name" required>
+            <input type="email" id="email" placeholder="Enter Your Email" required>
+            <select id="sport" required>
+                <option value="" disabled selected>Select a Sport</option>
+                <option value="kayaking">Kayaking</option>
+                <option value="surfing">Surfing</option>
+                <option value="motor_cross">Motor Cross</option>
+                <option value="rock_climbing">Rock Climbing</option>
+                <option value="skateboarding">Skateboarding</option>
+                <option value="skydiving">Skydiving</option>
+            </select>
+            <input type="date" id="date" required>
+            <p><strong>Price: RM 100</strong></p>
+        </div>
+        <div class="modal-footer">
+            <button class="submit-btn" onclick="submitBooking()">Submit</button>
+            <button class="close-btn" id="closeModal">Close</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.getElementById("closeModal");
+    const modal = document.getElementById("bookingModal");
+
+    openModal.addEventListener("click", () => {
+        modal.style.display = "flex";
+    });
+
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    function submitBooking() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const sport = document.getElementById("sport").value;
+        const date = document.getElementById("date").value;
+
+        if (!name || !email || !sport || !date) {
+            alert("Please fill in all the fields!");
+            return;
+        }
+
+        alert(`Thank you, ${name}! Your booking for ${sport} on ${date} has been confirmed. Price: RM 100.`);
+        modal.style.display = "none";
+    }
+</script>
+</body>
+
+</html>

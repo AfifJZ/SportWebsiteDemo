@@ -1,0 +1,330 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 950px;
+  /* Adjust the width as needed */
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+/* Individual cardbox style */
+.cardbox {
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+/* Style for the images */
+.cardbox img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Hover zoom effect for the image */
+.cardbox:hover img {
+  transform: scale(1.1);
+}
+
+/* Cardbox content */
+.cardbox-body {
+  padding: 15px;
+}
+
+/* Style for the star icon */
+.star {
+  font-size: 30px;
+  color: gray;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for the star */
+.star:hover {
+  color: gold;
+}
+
+/* Active star color */
+.star.active {
+  color: yellow;
+}
+
+/* Buttons for sliding */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Hover Effect for Images */
+.moreInformationBox-right img {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.moreInformationBox-right img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hoho {
+  padding-left: 40px;
+}
+
+/* Short and Rounded Button Styling */
+.read-more-button {
+  background-color: #4E6766;
+  color: #ffffff;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  width: 100px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.read-more-button:hover {
+  background-color: #3C4F4E;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Layout Adjustments */
+.moreInformationBox {
+  background-color: #daf3f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  flex-grow: 1;
+}
+
+.moreInformationBoxx {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  flex-grow: 1;
+}
+
+.moreInformationBox2 {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  flex-grow: 1;
+}
+
+.moreInformationBox-left {
+  width: 45%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  padding: 0 20px;
+}
+
+.moreInformationBox-leftt {
+  width: 45%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  padding: 0 20px;
+}
+
+.moreInformationBox-left3 {
+  width: 45%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  padding: 0 20px;
+}
+
+.moreInformationBox-left h2 {
+  font-family: 'Raleway', sans-serif;
+  color: #11414B;
+  padding-left: 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.moreInformationBox-leftt h4 {
+  font-family: 'Raleway', sans-serif;
+  color: #11414B;
+  padding-left: 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.moreInformationBox-leftt p {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  text-align: justify;
+  padding-left: 30px;
+}
+.moreInformationBox-left p {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #666;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.moreInformationBox-left3 h4 {
+  font-family: 'Raleway', sans-serif;
+  color: #11414B;
+  padding-left: 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.moreInformationBox-left3 p {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  text-align: justify;
+  padding-left: 30px;
+}
+
+.moreInformationBox-right {
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.video-tour-box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.video-tour-box h1 {
+  justify-content: center;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: #4E6766;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-body input,
+.modal-body select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-footer button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-btn {
+  background-color: #E23A48;
+  color: white;
+}
+
+.close-btn {
+  background-color: #ddd;
+}
